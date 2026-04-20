@@ -1,5 +1,5 @@
 # Menghitung diskriminan
-def calculate_discriminant()
+calculate_discriminant()
 print("Persamaan kuadrat: ax^2 + bx + c = 0")
 #input
 a = float(input('Enter coefficient a: '))
