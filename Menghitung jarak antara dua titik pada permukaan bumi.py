@@ -1,6 +1,6 @@
 import math
 
-def harvestine(lat1, lon1, lat2, lon2)
+
 
 #Konvrsi degrees ke radian
 
