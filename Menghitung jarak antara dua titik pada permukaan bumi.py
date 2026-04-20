@@ -1,7 +1,6 @@
 import math
 
 
-
 #Konvrsi degrees ke radian
 
 lat1= math.radians(lat1)
