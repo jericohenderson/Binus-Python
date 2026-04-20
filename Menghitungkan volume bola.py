@@ -1,6 +1,5 @@
 # Proses menghitung volume bola
 
-import math
 
 radius = float(input("Masukkan jari-jari bola"))
 
