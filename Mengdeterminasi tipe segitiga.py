@@ -11,7 +11,7 @@ if (a + b > c) and (a + c > b) and (b + c > a):
       print("scalene")
 
 else:
-print("not a triangle")
+    print("not a triangle")
          
            
            
