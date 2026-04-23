@@ -1,34 +1,34 @@
 usia: 19
 
 if (usia <= 1):
-  print ("bayi")
+  print("bayi")
   
 elif ((usia >= 2) and (usia <= 3)):
-  print ("balita")
+  print("balita")
 
 elif ((usia >= 4) and (usia <= 5)):
-  print ("anak prasekolah")
+  print("anak prasekolah")
 
 elif ((usia >= 6) and (usia <= 12)):
-  print ("anak")
+  print("anak")
 
 elif ((usia >= 13) and (usia <= 17)):
-  print ("remaja")
+  print("remaja")
 
 elif ((usia >= 18) and (usia <= 21)):
-  print ("anak muda")
+  print("anak muda")
 
 elif ((usia >= 22) and (usia <= 30)):
-  print ("pradewasa")
+  print("pradewasa")
 
 elif ((usia >= 31) and (usia <= 50)):
-  print ("dewasa")
+  print("dewasa")
 
 elif ((usia >= 51) and (usia <= 70)):
-  print ("pralansia")
+  print("pralansia")
 
 else:
-  print ("lansia")
+  print("lansia")
                         
          
 
