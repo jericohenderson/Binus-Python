@@ -1,28 +1,41 @@
 class Student:
-    def __init__(self, name=None, score=None):
+    "Common base class for all students"
+    stuCount = 0
+    
+    def __init__(self, name="Employee", salary=5000):
         self.name = name
         self.score = score
-
-    def declare_data(self, name, score):
-        self.name = name
-        self.score = score
-        print("Data Successfully Added")
-
-    def display_data(self):
-        print(f"\nName: {self.name}")
-        print(f"Score: {self.score}")
-
-    def change_data(self, field, new_value):
-        if field.lower() == "name":
-            self.name = new_value
-            print("Name Data Successfully Changed")
-        elif field.lower() == "score":
-            self.score = new_value
-            print("Score Data Successfully Changed")
+        Student.stuCount += 1
+        
+    def displayCount(self):
+        print("Total Students: %d" % Students.stuCount)
+    
+    def printStudent(self):
+        print("Name:", self.name, "\nScore:", self.score)
+    
+    
+    def getScore(self, parameterType):
+        if parameterType == "Name":
+            return self.name
+        elif parameterType == "Salary":
+            return self.salary
         else:
-            print("Invalid field selected.")
+            return "Data Not Found"
+    
+    
+    def setStudemt(self, name, salary):
+        self.name = name
+        self.salary = salary
 
-    def delete_data(self):
-        self.name = None
-        self.score = None
-        print("Data Successfully Deleted")
+student1 = Student()
+
+student1.printStudent()
+employee1.displayCount()
+
+
+StudentName = student1.getStudent("Name")
+print("The student's name is", studentName)
+
+
+Student1.setStudent("Jericor", 90)
+employee1.printEmployee()
