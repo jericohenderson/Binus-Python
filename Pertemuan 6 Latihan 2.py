@@ -1,35 +1,35 @@
 class Student:
-    def __init__(self, name=None, score=None):
-        self.name = name
-        self.score = score
+    def __init__(self):
+       
+        self._name = None
+        self._score = None
 
-    def declare_data(self, name, score):
-        self.name = name
-        self.score = score
-        print("Data Successfully Added")
+   
+    @property
+    def name(self):
+        return self._name
 
-    def display_data(self):
-        print(f"\nName: {self.name}")
-        print(f"Score: {self.score}")
+    @property
+    def score(self):
+        return self._score
 
-    def change_data(self, field, new_value):
-        if field.lower() == "name":
-            self.name = new_value
-            print("Name Data Successfully Changed")
-        elif field.lower() == "score":
-            self.score = new_value
-            print("Score Data Successfully Changed")
-        else:
-            print("Invalid field selected.")
+  
+    @name.setter
+    def name(self, value):
+        self._name = value
 
+    @score.setter
+    def score(self, value):
+        self._score = value
+
+    
     def delete_data(self):
-        self.name = None
-        self.score = None
+        self._name = None
+        self._score = None
         print("Data Successfully Deleted")
 
 def main():
-   
-    student_obj = Student()
+    student = Student()
 
     while True:
         print("\n===== OOP Program =====")
@@ -42,27 +42,36 @@ def main():
         choice = input("Enter Your Choice (1/2/3/4/5): ")
 
         if choice == '1':
-            name = input("Enter Your Name: ")
-            score = input("Enter Your Score: ")
-            student_obj.declare_data(name, score)
+            
+            student.name = input("Enter Your Name: ")
+            student.score = input("Enter Your Score: ")
+            print("Data Successfully Added")
 
         elif choice == '2':
-            student_obj.display_data()
+           
+            print(f"\nName: {student.name}")
+            print(f"Score: {student.score}")
 
         elif choice == '3':
-            field = input("What would you like to change (Name/Score): ")
-            new_val = input(f"Enter New {field.capitalize()}: ")
-            student_obj.change_data(field, new_val)
+            field = input("What would you like to change (Name/Score): ").strip().lower()
+            if field == "name":
+                student.name = input("Enter New Name: ")
+                print("Name Data Successfully Changed")
+            elif field == "score":
+                student.score = input("Enter New Score: ")
+                print("Score Data Successfully Changed")
+            else:
+                print("Invalid field.")
 
         elif choice == '4':
-            student_obj.delete_data()
+            student.delete_data()
 
         elif choice == '5':
             print("Program has ended. Thank you for using my program.")
             break
         
         else:
-            print("Invalid choice. Please enter a number from 1 to 5.")
+            print("Invalid choice. Please enter a value from 1 to 5")
 
 if __name__ == "__main__":
     main()
